@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+/* ft_printf */
+# include "ft_printf/ft_printf.h"
+
+/* gnl */
+#include "get_next_line/get_next_line_bonus.h"
+
 /*  Checks  */
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
