@@ -7,7 +7,9 @@ ft_memchr.c ft_memcmp.c ft_atoi.c ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr
 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-ft_lstclear.c ft_lstiter.c ft_lstmap.c
+ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr.c ft_printf/ft_putstr.c ft_printf/ft_putunbr.c ft_printf/ft_putnbr_base.c ft_printf/ft_printhex.c \
+get_next_line/get_next_line_bonus.c get_next_line/get_next_line_utils_bonus.c
 OBJS := $(SRCS:.c=.o)
 
 CFLAGS := -Wall -Wextra -Werror
@@ -17,15 +19,17 @@ AR := ar rcs
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $@ $^
+	@$(AR) $@ $^
 
 $(OBJS): %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 re: fclean all
+
+.PHONY: all fclean clean re
