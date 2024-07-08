@@ -30,7 +30,7 @@ char	*read_file(int fd, char *line)
 			return (NULL);
 		}
 		buffer[read_result] = '\0';
-		line = ft_strjoin(line, buffer);
+		line = ft_strjoin_gnl(line, buffer);
 	}
 	free(buffer);
 	return (line);

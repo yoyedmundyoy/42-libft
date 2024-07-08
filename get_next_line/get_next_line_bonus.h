@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);
 char	*parse_result(char *line);
 char	*parse_new_line(char *line);
